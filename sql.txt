@@ -1,0 +1,15 @@
+-- wiki_data.wikipedia_pages definition
+ 
+CREATE TABLE `wikipedia_pages` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `namespace` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `page_id` int DEFAULT NULL,
+  `revision_id` int DEFAULT NULL,
+  `contributor_username` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contributor_id` int DEFAULT NULL,
+  `timestamp` datetime DEFAULT NULL,
+  `text` longtext COLLATE utf8mb4_unicode_ci,
+  PRIMARY KEY (`id`),
+  KEY `idx_title` (`title`)
+) ENGINE=InnoDB AUTO_INCREMENT=4499176 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
